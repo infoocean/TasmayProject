@@ -31,19 +31,20 @@ export function CarModelCarousel() {
       return;
     }
 
-    function updateControls() {
+    function updateControls(track: HTMLDivElement) {
       setCanScrollPrevious(track.scrollLeft > 1);
       setCanScrollNext(track.scrollLeft + track.clientWidth < track.scrollWidth - 1);
     }
 
     track.scrollLeft = 0;
-    updateControls();
-    track.addEventListener("scroll", updateControls, { passive: true });
-    window.addEventListener("resize", updateControls);
+    const handleScrollOrResize = () => updateControls(track);
+    handleScrollOrResize();
+    track.addEventListener("scroll", handleScrollOrResize, { passive: true });
+    window.addEventListener("resize", handleScrollOrResize);
 
     return () => {
-      track.removeEventListener("scroll", updateControls);
-      window.removeEventListener("resize", updateControls);
+      track.removeEventListener("scroll", handleScrollOrResize);
+      window.removeEventListener("resize", handleScrollOrResize);
     };
   }, [normalizedQuery, filteredModels.length]);
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, type FormEvent } from "react";
+import { useState, type FormEvent } from "react";
 import { ArrowUpRight, Check, Clipboard, Info } from "lucide-react";
 import { vehicleCategories, services } from "@/data/site-content";
 import { carModels } from "@/data/car-models";
@@ -58,32 +58,13 @@ function formatSummary(values: EnquiryValues) {
   ].join("\n");
 }
 
-export function QuoteForm() {
-  const [values, setValues] = useState<EnquiryValues>(initialValues);
+type QuoteFormProps = { initialValues?: Partial<EnquiryValues> };
+
+export function QuoteForm({ initialValues: providedValues }: QuoteFormProps) {
+  const [values, setValues] = useState<EnquiryValues>(() => ({ ...initialValues, ...providedValues }));
   const [errors, setErrors] = useState<FieldErrors>({});
   const [summary, setSummary] = useState("");
   const [copyState, setCopyState] = useState<"idle" | "copied" | "failed">("idle");
-
-  useEffect(() => {
-    const searchParams = new URLSearchParams(window.location.search);
-    const serviceSlug = searchParams.get("service");
-    const vehicleSlug = searchParams.get("vehicle");
-    const modelSlug = searchParams.get("model");
-    const selectedService = services.find((service) => service.slug === serviceSlug);
-    const selectedVehicle = vehicleCategories.find((vehicle) => vehicle.slug === vehicleSlug);
-    const selectedModel = carModels.find((model) => model.slug === modelSlug);
-    const modelVehicle = selectedModel?.vehicleSlug && vehicleCategories.find((vehicle) => vehicle.slug === selectedModel.vehicleSlug);
-    const selectedVehicleForForm = selectedVehicle ?? modelVehicle;
-
-    if (selectedService || selectedVehicle || selectedModel) {
-      setValues((current) => ({
-        ...current,
-        ...(selectedService ? { tripType: selectedService.name } : {}),
-        ...(selectedVehicleForForm ? { vehicle: selectedVehicleForForm.name } : {}),
-        ...(selectedModel ? { model: `${selectedModel.brand} ${selectedModel.name}` } : {}),
-      }));
-    }
-  }, []);
 
   function update<K extends keyof EnquiryValues>(key: K, value: EnquiryValues[K]) {
     setValues((current) => ({ ...current, [key]: value }));

@@ -3,6 +3,8 @@ import { PageIntro } from "@/components/page-intro";
 import { QuoteForm } from "@/components/quote-form";
 import { siteConfig } from "@/config/site";
 import { createPageMetadata } from "@/lib/metadata";
+import { vehicleCategories, services } from "@/data/site-content";
+import { carModels } from "@/data/car-models";
 
 export const metadata = createPageMetadata({
   title: "Contact and Rental Enquiry",
@@ -10,7 +12,25 @@ export const metadata = createPageMetadata({
   path: "/contact",
 });
 
-export default function ContactPage() {
+type ContactPageProps = {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+};
+
+export default async function ContactPage({ searchParams }: ContactPageProps) {
+  const params = await searchParams;
+  const serviceSlug = typeof params.service === "string" ? params.service : undefined;
+  const vehicleSlug = typeof params.vehicle === "string" ? params.vehicle : undefined;
+  const modelSlug = typeof params.model === "string" ? params.model : undefined;
+  const selectedService = services.find((service) => service.slug === serviceSlug);
+  const selectedVehicle = vehicleCategories.find((vehicle) => vehicle.slug === vehicleSlug);
+  const selectedModel = carModels.find((model) => model.slug === modelSlug);
+  const modelVehicle = selectedModel?.vehicleSlug && vehicleCategories.find((vehicle) => vehicle.slug === selectedModel.vehicleSlug);
+  const selectedVehicleForForm = selectedVehicle ?? modelVehicle;
+  const initialValues = {
+    ...(selectedService ? { tripType: selectedService.name } : {}),
+    ...(selectedVehicleForForm ? { vehicle: selectedVehicleForForm.name } : {}),
+    ...(selectedModel ? { model: `${selectedModel.brand} ${selectedModel.name}` } : {}),
+  };
   return (
     <>
       <PageIntro eyebrow="CONTACT & ENQUIRIES" title="Tell us about the trip." description="Add your route, date, and preferred vehicle category to prepare a quote enquiry summary." />
@@ -30,7 +50,7 @@ export default function ContactPage() {
           </aside>
           <div className="contact-form-card">
             <div className="contact-form-card__heading"><span>QUOTE ENQUIRY</span><span>01 <i /> 08</span></div>
-            <QuoteForm />
+            <QuoteForm initialValues={initialValues} />
           </div>
         </div>
       </section>
