@@ -25,26 +25,23 @@ export function CarModelCarousel() {
 
   useEffect(() => {
     const track = trackRef.current;
-    if (!track) {
-      setCanScrollPrevious(false);
-      setCanScrollNext(false);
-      return;
-    }
+    if (!track) return;
 
-    function updateControls(track: HTMLDivElement) {
-      setCanScrollPrevious(track.scrollLeft > 1);
-      setCanScrollNext(track.scrollLeft + track.clientWidth < track.scrollWidth - 1);
+    function updateControls() {
+      const currentTrack = trackRef.current;
+      if (!currentTrack) return;
+      setCanScrollPrevious(currentTrack.scrollLeft > 1);
+      setCanScrollNext(currentTrack.scrollLeft + currentTrack.clientWidth < currentTrack.scrollWidth - 1);
     }
 
     track.scrollLeft = 0;
-    const handleScrollOrResize = () => updateControls(track);
-    handleScrollOrResize();
-    track.addEventListener("scroll", handleScrollOrResize, { passive: true });
-    window.addEventListener("resize", handleScrollOrResize);
+    updateControls();
+    track.addEventListener("scroll", updateControls, { passive: true });
+    window.addEventListener("resize", updateControls);
 
     return () => {
-      track.removeEventListener("scroll", handleScrollOrResize);
-      window.removeEventListener("resize", handleScrollOrResize);
+      track.removeEventListener("scroll", updateControls);
+      window.removeEventListener("resize", updateControls);
     };
   }, [normalizedQuery, filteredModels.length]);
 
