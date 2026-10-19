@@ -1,0 +1,389 @@
+{
+  "maruti-suzuki-dzire": {
+    "src": "/images/model-photos/maruti-suzuki-dzire.jpg",
+    "alt": "Maruti Suzuki Dzire car",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Maruti_Suzuki_Dzire_VXi_VVT.JPG",
+    "artist": "Biswarup Ganguly",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "title": "Maruti Suzuki Dzire VXi VVT.JPG"
+  },
+  "honda-amaze": {
+    "src": "/images/model-photos/honda-amaze.png",
+    "alt": "Honda Amaze car",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Honda_Amaze_(front).png",
+    "artist": "Agratsa",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "title": "Honda Amaze (front).png"
+  },
+  "honda-city": {
+    "src": "/images/model-photos/honda-city.jpg",
+    "alt": "Honda City car",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2015_Honda_City_1.5_i-VTEC_LX_(Argentina).jpg",
+    "artist": "Just a Man",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "title": "2015 Honda City 1.5 i-VTEC LX (Argentina).jpg"
+  },
+  "hyundai-verna": {
+    "src": "/images/model-photos/hyundai-verna.jpg",
+    "alt": "Hyundai Verna car",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:00_HYUNDAI_VERNA_2.jpg",
+    "artist": "Benespit",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "title": "00 HYUNDAI VERNA 2.jpg"
+  },
+  "hyundai-aura": {
+    "src": "/images/model-photos/hyundai-aura.png",
+    "alt": "Hyundai Aura car",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2020_Hyundai_Aura_Front.png",
+    "artist": "Auto Zuto",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "title": "2020 Hyundai Aura Front.png"
+  },
+  "volkswagen-virtus": {
+    "src": "/images/model-photos/volkswagen-virtus.jpg",
+    "alt": "Volkswagen Virtus car",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2018_Volkswagen_Virtus_1.6_MSi_Highline_AT.jpg",
+    "artist": "Just a Man",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "title": "2018 Volkswagen Virtus 1.6 MSi Highline AT.jpg"
+  },
+  "maruti-suzuki-swift": {
+    "src": "/images/model-photos/maruti-suzuki-swift.jpg",
+    "alt": "Maruti Suzuki Swift car",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Maruti_Suzuki_Swift_2092.JPG",
+    "artist": "Premnath Kudva",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "title": "Maruti Suzuki Swift 2092.JPG"
+  },
+  "maruti-suzuki-baleno": {
+    "src": "/images/model-photos/maruti-suzuki-baleno.jpg",
+    "alt": "Maruti Suzuki Baleno car",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2022_Maruti_Suzuki_Baleno_Alpha_(India)_front_view.jpg",
+    "artist": "Milind Kwatra",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "title": "2022 Maruti Suzuki Baleno Alpha (India) front view.jpg"
+  },
+  "maruti-suzuki-wagonr": {
+    "src": "/images/model-photos/maruti-suzuki-wagonr.jpg",
+    "alt": "Maruti Suzuki Wagonr car",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Maruti_Suzuki_-_WagonR_LXi_(front).JPG",
+    "artist": "Biswarup Ganguly",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "title": "Maruti Suzuki - WagonR LXi (front).JPG"
+  },
+  "kia-syros": {
+    "src": "/images/model-photos/kia-syros.jpg",
+    "alt": "Kia Syros car",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2025_Kia_Syros_1.5_HTX%2B_(O)_(India)_front_view_01.jpg",
+    "artist": "The Drivers Hub",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "title": "2025 Kia Syros 1.5 HTX+ (O) (India) front view 01.jpg"
+  },
+  "toyota-urban-cruiser-hyryder": {
+    "src": "/images/model-photos/toyota-urban-cruiser-hyryder.jpg",
+    "alt": "Toyota Urban Cruiser Hyryder car",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2022_Toyota_Urban_Cruiser_Hyryder_V_Hybrid_(India)_front_view.jpg",
+    "artist": "DriveSpark",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "title": "2022 Toyota Urban Cruiser Hyryder V Hybrid (India) front view.jpg"
+  },
+  "toyota-fortuner": {
+    "src": "/images/model-photos/toyota-fortuner.jpg",
+    "alt": "Toyota Fortuner car",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2016_Toyota_Fortuner_(AN160)_VRZ,_West_Surabaya.jpg",
+    "artist": "Alex Neman",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "title": "2016 Toyota Fortuner (AN160) VRZ, West Surabaya.jpg"
+  },
+  "honda-elevate": {
+    "src": "/images/model-photos/honda-elevate.jpg",
+    "alt": "Honda Elevate car",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2023_Honda_Elevate_VX_(India)_front_view.jpg",
+    "artist": "Hulchul TV",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "title": "2023 Honda Elevate VX (India) front view.jpg"
+  },
+  "renault-kiger": {
+    "src": "/images/model-photos/renault-kiger.png",
+    "alt": "Renault Kiger car",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2021_Renault_Kiger_RXZ_(India).png",
+    "artist": "DriveSpark",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "title": "2021 Renault Kiger RXZ (India).png"
+  },
+  "nissan-magnite": {
+    "src": "/images/model-photos/nissan-magnite.png",
+    "alt": "Nissan Magnite car",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2020_Nissan_Magnite_front_view_(India)_01.png",
+    "artist": "Hindi DriveSpark",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "title": "2020 Nissan Magnite front view (India) 01.png"
+  },
+  "maruti-suzuki-ertiga": {
+    "src": "/images/model-photos/maruti-suzuki-ertiga.jpg",
+    "alt": "Maruti Suzuki Ertiga car",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2022_Maruti_Suzuki_Ertiga_LXi.jpg",
+    "artist": "Ramakrishna Mission Vidyapith",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "title": "2022 Maruti Suzuki Ertiga LXi.jpg"
+  },
+  "maruti-suzuki-xl6": {
+    "src": "/images/model-photos/maruti-suzuki-xl6.jpg",
+    "alt": "Maruti Suzuki Xl6 car",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Maruti_Suzuki_XL6_(front).jpg",
+    "artist": "Agratsa",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "title": "Maruti Suzuki XL6 (front).jpg"
+  },
+  "kia-carens": {
+    "src": "/images/model-photos/kia-carens.jpg",
+    "alt": "Kia Carens car",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:00_Kia_Carens_(UN)_1.jpg",
+    "artist": "Benespit",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "title": "00 Kia Carens (UN) 1.jpg"
+  },
+  "toyota-innova-crysta": {
+    "src": "/images/model-photos/toyota-innova-crysta.jpg",
+    "alt": "Toyota Innova Crysta car",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Toyota_Innova_Crysta.jpg",
+    "artist": "Abhishekptlbbk",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "title": "Toyota Innova Crysta.jpg"
+  },
+  "skoda-slavia": {
+    "src": "/images/model-photos/skoda-slavia.png",
+    "alt": "Skoda Slavia car",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2021_%C5%A0koda_Slavia_1.5_TSI_Style_(India)_front_view.png",
+    "artist": "Athira Murali",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "title": "2021 Škoda Slavia 1.5 TSI Style (India) front view.png"
+  },
+  "maruti-suzuki-alto-k10": {
+    "src": "/images/model-photos/maruti-suzuki-alto-k10.jpg",
+    "alt": "Maruti Suzuki Alto K10 car",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Maruti_Suzuki_Alto_K10.jpg",
+    "artist": "Vis M",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "title": "Maruti Suzuki Alto K10.jpg"
+  },
+  "toyota-glanza": {
+    "src": "/images/model-photos/toyota-glanza.jpg",
+    "alt": "Toyota Glanza car",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Toyota_Glanza_2022_Facelift.jpg",
+    "artist": "AcrobatZ",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "title": "Toyota Glanza 2022 Facelift.jpg"
+  },
+  "hyundai-grand-i10-nios": {
+    "src": "/images/model-photos/hyundai-grand-i10-nios.jpg",
+    "alt": "Hyundai Grand I10 Nios car",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2021_Hyundai_Grand_i10_Nios_1.0AT_Standard_red_front_view_in_Brunei.jpg",
+    "artist": "AIMHO'S REBELLION 8490s",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "title": "2021 Hyundai Grand i10 Nios 1.0AT Standard red front view in Brunei.jpg"
+  },
+  "hyundai-i20": {
+    "src": "/images/model-photos/hyundai-i20.jpg",
+    "alt": "Hyundai I20 car",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hyundai_i20_(BC3)_174119.jpg",
+    "artist": "Trop86",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "title": "Hyundai i20 (BC3) 174119.jpg"
+  },
+  "tata-tiago": {
+    "src": "/images/model-photos/tata-tiago.jpg",
+    "alt": "Tata Tiago car",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2019_Tata_Tiago_XZ_(front_three-quarter_view)_(pre-facelift).jpg",
+    "artist": "Parespeare",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "title": "2019 Tata Tiago XZ (front three-quarter view) (pre-facelift).jpg"
+  },
+  "tata-altroz": {
+    "src": "/images/model-photos/tata-altroz.jpg",
+    "alt": "Tata Altroz car",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tata_Altroz,_GIMS_2019,_Le_Grand-Saconnex_(GIMS0646).jpg",
+    "artist": "Matti Blume",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "title": "Tata Altroz, GIMS 2019, Le Grand-Saconnex (GIMS0646).jpg"
+  },
+  "maruti-suzuki-brezza": {
+    "src": "/images/model-photos/maruti-suzuki-brezza.jpg",
+    "alt": "Maruti Suzuki Brezza car",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2016_Maruti_Suzuki_Vitara_Brezza.jpg",
+    "artist": "Asim Patel",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "title": "2016 Maruti Suzuki Vitara Brezza.jpg"
+  },
+  "maruti-suzuki-grand-vitara": {
+    "src": "/images/model-photos/maruti-suzuki-grand-vitara.png",
+    "alt": "Maruti Suzuki Grand Vitara car",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2022_Maruti_Suzuki_Grand_Vitara_Alpha_Smart_Hybrid_(India)_front_view.png",
+    "artist": "Explorer Rider",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "title": "2022 Maruti Suzuki Grand Vitara Alpha Smart Hybrid (India) front view.png"
+  },
+  "tata-punch": {
+    "src": "/images/model-photos/tata-punch.png",
+    "alt": "Tata Punch car",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2021_Tata_Punch_Creative_(India)_front_view_01.png",
+    "artist": "Athira Murali",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "title": "2021 Tata Punch Creative (India) front view 01.png"
+  },
+  "tata-nexon": {
+    "src": "/images/model-photos/tata-nexon.jpg",
+    "alt": "Tata Nexon car",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2018_Tata_Nexon_XM.jpg",
+    "artist": "Vauxford",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "title": "2018 Tata Nexon XM.jpg"
+  },
+  "tata-curvv": {
+    "src": "/images/model-photos/tata-curvv.png",
+    "alt": "Tata Curvv car",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2025_Tata_Curvv_Creative%2B_S_Petrol_(India)_front_view.png",
+    "artist": "Manish Bhardwaj",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "title": "2025 Tata Curvv Creative+ S Petrol (India) front view.png"
+  },
+  "tata-safari": {
+    "src": "/images/model-photos/tata-safari.jpg",
+    "alt": "Tata Safari car",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2007_Tata_Safari_2.2_DiCOR.jpg",
+    "artist": "Rutger van der Maar",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "title": "2007 Tata Safari 2.2 DiCOR.jpg"
+  },
+  "hyundai-exter": {
+    "src": "/images/model-photos/hyundai-exter.jpg",
+    "alt": "Hyundai Exter car",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2023_Hyundai_Exter.jpg",
+    "artist": "Dibyam Das",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "title": "2023 Hyundai Exter.jpg"
+  },
+  "hyundai-venue": {
+    "src": "/images/model-photos/hyundai-venue.jpg",
+    "alt": "Hyundai Venue car",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:0_Hyundai_Venue_1.jpg",
+    "artist": "Benespit",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "title": "0 Hyundai Venue 1.jpg"
+  },
+  "hyundai-creta": {
+    "src": "/images/model-photos/hyundai-creta.jpg",
+    "alt": "Hyundai Creta car",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2018_HYUNDAI_Creta_facelift_1.6_Brunei_(side_view).jpg",
+    "artist": "AIMHO'S REBELLION 8490s",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "title": "2018 HYUNDAI Creta facelift 1.6 Brunei (side view).jpg"
+  },
+  "hyundai-alcazar": {
+    "src": "/images/model-photos/hyundai-alcazar.png",
+    "alt": "Hyundai Alcazar car",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2021_Hyundai_Alcazar_1.5_Prestige_(India)_front_view.png",
+    "artist": "AMAN AUTOMOBILES",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "title": "2021 Hyundai Alcazar 1.5 Prestige (India) front view.png"
+  },
+  "mahindra-xuv-3xo": {
+    "src": "/images/model-photos/mahindra-xuv-3xo.jpg",
+    "alt": "Mahindra Xuv 3Xo car",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2025_Mahindra_XUV_3XO_AX7L_front.jpg",
+    "artist": "LuvsMG481",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "title": "2025 Mahindra XUV 3XO AX7L front.jpg"
+  },
+  "mahindra-thar": {
+    "src": "/images/model-photos/mahindra-thar.jpg",
+    "alt": "Mahindra Thar car",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mahindra_Thar.jpg",
+    "artist": "NISHAD.K.SALEEM",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "title": "Mahindra Thar.jpg"
+  },
+  "mahindra-thar-roxx": {
+    "src": "/images/model-photos/mahindra-thar-roxx.jpg",
+    "alt": "Mahindra Thar Roxx car",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mahindra_Thar_ROXX_on_dirt.jpg",
+    "artist": "The Drivers Hub",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "title": "Mahindra Thar ROXX on dirt.jpg"
+  },
+  "mahindra-bolero": {
+    "src": "/images/model-photos/mahindra-bolero.jpg",
+    "alt": "Mahindra Bolero car",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2009_Mahindra_Bolero_DC_CRDe_(7141667401).jpg",
+    "artist": "Spanish Coches",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "title": "2009 Mahindra Bolero DC CRDe (7141667401).jpg"
+  },
+  "kia-sonet": {
+    "src": "/images/model-photos/kia-sonet.jpg",
+    "alt": "Kia Sonet car",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2021_Kia_Sonet_1.5_EX.jpg",
+    "artist": "RL GNZLZ",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "title": "2021 Kia Sonet 1.5 EX.jpg"
+  },
+  "kia-seltos": {
+    "src": "/images/model-photos/kia-seltos.jpg",
+    "alt": "Kia Seltos car",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:%2722_Kia_Seltos_AWD.jpg",
+    "artist": "Bull-Doser",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "title": "'22 Kia Seltos AWD.jpg"
+  },
+  "maruti-suzuki-jimny": {
+    "src": "/images/model-photos/maruti-suzuki-jimny.jpg",
+    "alt": "Maruti Suzuki Jimny car",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2018-2024_Suzuki_Jimny_Sierra_JC.jpg",
+    "artist": "TTTNIS",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "title": "2018-2024 Suzuki Jimny Sierra JC.jpg"
+  }
+}

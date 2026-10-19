@@ -3,9 +3,8 @@ export const siteConfig = {
   area: "Indore, Madhya Pradesh, India",
   // TODO: Client to supply the production domain before launch.
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL?.trim() || null,
-  // TODO: Client to supply verified business contact details.
-  phone: null as string | null,
-  whatsappNumber: null as string | null,
+  phone: "+91 99931 11269",
+  whatsappNumber: "919993111269",
   email: null as string | null,
   address: null as string | null,
   businessHours: null as string | null,
@@ -21,5 +20,8 @@ export const siteConfig = {
   },
   pricingLabel: "Request a Quote",
 } as const;
+
+export const whatsappMessage = "Hi Tasmay Car Rentals, I’d like to enquire about a car rental. Please share availability and pricing.";
+export const whatsappHref = `https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
 export type SiteConfig = typeof siteConfig;

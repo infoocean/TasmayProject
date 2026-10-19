@@ -6,6 +6,17 @@ import { useEffect, useRef, useState } from "react";
 import { ArrowLeft, ArrowRight, ArrowUpRight, Search } from "lucide-react";
 import { carModels } from "@/data/car-models";
 import { vehiclePhotos } from "@/data/vehicle-images";
+import carModelImages from "@/data/car-model-images.json";
+
+type ModelPhoto = {
+  src: string;
+  alt: string;
+  title: string;
+  sourceUrl: string;
+  artist: string;
+  license: string;
+  licenseUrl: string;
+};
 
 function normalizeSearch(value: string) {
   return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
@@ -16,6 +27,7 @@ export function CarModelCarousel() {
   const [query, setQuery] = useState("");
   const [canScrollPrevious, setCanScrollPrevious] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
+  const [isInteracting, setIsInteracting] = useState(false);
   const normalizedQuery = normalizeSearch(query.trim());
   const searchTerms = normalizedQuery.split(/\s+/).filter(Boolean);
   const filteredModels = carModels.filter((model) => {
@@ -45,12 +57,35 @@ export function CarModelCarousel() {
     };
   }, [normalizedQuery, filteredModels.length]);
 
+  useEffect(() => {
+    if (isInteracting || normalizedQuery || filteredModels.length < 2) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const interval = window.setInterval(() => {
+      const track = trackRef.current;
+      if (!track) return;
+      const atEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
+      const firstCard = track.firstElementChild;
+      const gap = Number.parseFloat(window.getComputedStyle(track).columnGap) || 0;
+      const nextLeft = atEnd
+        ? 0
+        : track.scrollLeft + (firstCard instanceof HTMLElement ? firstCard.offsetWidth + gap : track.clientWidth * 0.8);
+      track.scrollTo({ left: nextLeft, behavior: "smooth" });
+    }, 4000);
+
+    return () => window.clearInterval(interval);
+  }, [filteredModels.length, isInteracting, normalizedQuery]);
+
   function scrollByCard(direction: -1 | 1) {
     const track = trackRef.current;
     if (!track) return;
 
+    const firstCard = track.firstElementChild;
+    const gap = Number.parseFloat(window.getComputedStyle(track).columnGap) || 0;
+    const step = firstCard instanceof HTMLElement ? firstCard.offsetWidth + gap : track.clientWidth * 0.8;
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    track.scrollBy({ left: direction * track.clientWidth * 0.82, behavior: reducedMotion ? "auto" : "smooth" });
+    const nextLeft = Math.max(0, Math.min(track.scrollLeft + direction * step, track.scrollWidth - track.clientWidth));
+    track.scrollTo({ left: nextLeft, behavior: reducedMotion ? "auto" : "smooth" });
   }
 
   return (
@@ -76,7 +111,6 @@ export function CarModelCarousel() {
           />
         </label>
         <div className="car-models__toolbar-end">
-          <p className="car-models__result-count" aria-live="polite">Showing {filteredModels.length} of {carModels.length} models</p>
           <div className="car-models__controls" role="group" aria-label="Carousel controls">
             <button type="button" aria-label="Previous car models" onClick={() => scrollByCard(-1)} disabled={!canScrollPrevious}>
               <ArrowLeft size={18} aria-hidden="true" />
@@ -94,6 +128,12 @@ export function CarModelCarousel() {
           ref={trackRef}
           tabIndex={0}
           aria-label={`${filteredModels.length} matching car models`}
+          onMouseEnter={() => setIsInteracting(true)}
+          onMouseLeave={() => setIsInteracting(false)}
+          onFocusCapture={() => setIsInteracting(true)}
+          onBlurCapture={(event) => {
+            if (!event.currentTarget.contains(event.relatedTarget as Node | null)) setIsInteracting(false);
+          }}
           onKeyDown={(event) => {
             if (event.target !== event.currentTarget) return;
             if (event.key === "ArrowLeft") {
@@ -108,18 +148,18 @@ export function CarModelCarousel() {
         >
           {filteredModels.map((model, index) => {
             const photoKey = model.segment === "SUV" ? "suv" : model.segment === "MPV" ? "ertiga-innova" : "sedan";
-            const photo = vehiclePhotos[photoKey];
+            const photo = (carModelImages as Record<string, ModelPhoto>)[model.slug];
+            const fallbackPhoto = vehiclePhotos[photoKey];
 
             return (
               <article className="car-model-card" key={model.slug} role="group" aria-roledescription="slide" aria-label={`${model.brand} ${model.name}, ${index + 1} of ${filteredModels.length}`}>
                 <figure className="car-model-card__visual">
                   <Image
-                    src={photo.src}
-                    alt="Illustrative stock photo; the exact vehicle and model may differ"
+                    src={photo?.src ?? fallbackPhoto.src}
+                    alt={photo?.alt ?? fallbackPhoto.alt}
                     fill
-                    sizes="(max-width: 580px) 84vw, 340px"
+                    sizes="(max-width: 580px) 100vw, (max-width: 820px) 50vw, 340px"
                   />
-                  <figcaption>Illustrative vehicle photo</figcaption>
                 </figure>
                 <div className="car-model-card__body">
                   <p className="car-model-card__meta"><span>{model.brand}</span><span aria-hidden="true">·</span>{model.segment}</p>
@@ -136,7 +176,6 @@ export function CarModelCarousel() {
         <p className="car-models__empty">No models match “{query.trim()}”. Try a different name or brand.</p>
       )}
 
-      <p className="car-models__note">These are popular models sold in India, not a confirmed list of rental vehicles. Model availability is confirmed by quote; photos are illustrative.</p>
     </section>
   );
 }

@@ -54,7 +54,6 @@ export default function HomePage() {
             {vehicleCategories.map((vehicle) => <VehicleCard key={vehicle.slug} vehicle={vehicle} />)}
           </div>
           <CarModelCarousel />
-          <p className="section-footnote">Category and model photos are illustrative and may not match vehicles available. Confirm the exact vehicle and availability when requesting a quote.</p>
         </div>
       </section>
 
@@ -65,21 +64,28 @@ export default function HomePage() {
             <h2>One starting point.<br /><span>Many ways to travel.</span></h2>
             <p>From a local trip to a longer journey, tell us where you’re headed and which vehicle category you prefer. Pricing is shared by quote.</p>
             <Link className="button button--light" href="/pricing">How pricing works <ArrowUpRight size={16} aria-hidden="true" /></Link>
-            <div className="split-panel__marker"><span>01</span><i /><span>INDORE</span></div>
+            <div className="split-panel__marker" aria-label="Service destinations">
+              <span className="split-panel__marker-places">
+                <span><MapPin size={15} aria-hidden="true" />INDORE</span>
+                <span><MapPin size={15} aria-hidden="true" />MAHAKALESHWAR</span>
+                <span><MapPin size={15} aria-hidden="true" />SAWARIYA SETH</span>
+                <span><MapPin size={15} aria-hidden="true" />OMKARESHWAR</span>
+                <span><MapPin size={15} aria-hidden="true" />UDAIPUR</span>
+                <span><MapPin size={15} aria-hidden="true" />KHATU SHYAM</span>
+              </span>
+            </div>
           </div>
           <div className="split-panel__services">
             <div className="split-panel__services-heading">
               <span>TRIP OPTIONS</span>
               <Link href="/services" aria-label="View all services"><ArrowUpRight size={18} /></Link>
             </div>
-            {services.map((service, index) => (
+            {services.map((service) => (
               <Link className="split-service" href="/services" key={service.slug}>
-                <span className="split-service__number">0{index + 1}</span>
                 <span>{service.name}</span>
                 <ArrowUpRight size={17} aria-hidden="true" />
               </Link>
             ))}
-            <p className="split-panel__disclaimer">Service options are listed in the supplied brief and need client confirmation before launch.</p>
           </div>
         </div>
       </section>
@@ -95,7 +101,7 @@ export default function HomePage() {
             <Link className="text-link section-heading-row__link" href="/services">All trip options <ArrowUpRight size={16} aria-hidden="true" /></Link>
           </div>
           <div className="service-grid">
-            {services.slice(0, 3).map((service, index) => <ServiceCard key={service.slug} service={service} index={index} />)}
+            {services.slice(0, 3).map((service, index) => <ServiceCard key={service.slug} service={service} index={index} showImage />)}
           </div>
         </div>
       </section>
