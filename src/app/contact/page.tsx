@@ -1,14 +1,14 @@
 import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { PageIntro } from "@/components/page-intro";
 import { QuoteForm } from "@/components/quote-form";
-import { siteConfig } from "@/config/site";
+import { siteConfig, whatsappHref } from "@/config/site";
 import { createPageMetadata } from "@/lib/metadata";
 import { vehicleCategories, services } from "@/data/site-content";
 import { carModels } from "@/data/car-models";
 
 export const metadata = createPageMetadata({
   title: "Contact and Rental Enquiry",
-  description: "Prepare a car rental quote enquiry for Tasmay Car Rentals. Phone, WhatsApp, email, and delivery channels are not yet configured.",
+  description: "Contact Tasmay Car Rentals by phone or WhatsApp, or prepare a car rental quote enquiry.",
   path: "/contact",
 });
 
@@ -42,11 +42,11 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
             <p>Share your trip details in the form. It will prepare a summary on this device only.</p>
             <div className="contact-methods">
               <div className="contact-method"><span><MapPin size={18} /></span><p><strong>Service area</strong><small>{siteConfig.area}</small></p></div>
-              <div className="contact-method contact-method--unavailable"><span><Phone size={18} /></span><p><strong>Phone</strong><small>Number not supplied</small></p></div>
-              <div className="contact-method contact-method--unavailable"><span><MessageCircle size={18} /></span><p><strong>WhatsApp</strong><small>Number not supplied</small></p></div>
+              <a className="contact-method" href="tel:+919993111269"><span><Phone size={18} /></span><p><strong>Phone</strong><small>+91 99931 11269</small></p></a>
+              <a className="contact-method" href={whatsappHref} target="_blank" rel="noopener noreferrer"><span><MessageCircle size={18} /></span><p><strong>WhatsApp</strong><small>Chat with us</small></p></a>
               <div className="contact-method contact-method--unavailable"><span><Mail size={18} /></span><p><strong>Email</strong><small>Address not supplied</small></p></div>
             </div>
-            <div className="contact-warning"><span className="contact-warning__dot" /><p>Phone, WhatsApp, email, and a message delivery service have not been configured. Preparing a summary here does not submit it to the business.</p></div>
+            <div className="contact-warning"><span className="contact-warning__dot" /><p>Use the phone or WhatsApp links to contact us. The form prepares a summary on this device and does not submit it.</p></div>
           </aside>
           <div className="contact-form-card">
             <div className="contact-form-card__heading"><span>QUOTE ENQUIRY</span><span>01 <i /> 08</span></div>

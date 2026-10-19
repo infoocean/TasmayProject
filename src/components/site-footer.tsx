@@ -26,6 +26,7 @@ export function SiteFooter() {
             <Link href="/contact">Contact</Link>
             <Link href="/privacy-policy">Privacy policy</Link>
             <Link href="/terms-and-conditions">Terms and conditions</Link>
+            <Link className="site-footer__image-credits" href="/image-credits">Image credits</Link>
           </div>
           <div className="site-footer__contact">
             <span className="eyebrow eyebrow--light">HAVE A ROUTE IN MIND?</span>

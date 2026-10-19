@@ -5,6 +5,9 @@ import Link from "next/link";
 import { Menu, X, ArrowUpRight, Phone, MapPin } from "lucide-react";
 import { Brand } from "@/components/brand";
 import { navigation } from "@/data/site-content";
+import { siteConfig, whatsappHref } from "@/config/site";
+
+const phoneHref = `tel:${siteConfig.phone.replace(/\s/g, "")}`;
 
 function WhatsAppIcon({ size }: { size: number }) {
   return (
@@ -20,11 +23,11 @@ export function SiteHeader() {
   return (
     <header className="site-header" onKeyDown={(event) => { if (event.key === "Escape") setOpen(false); }}>
       <div className="site-header__mobile-contact" role="group" aria-label="Contact Tasmay Car Rentals">
-        <a href="tel:+919131649079" aria-label="Call +91 91316 49079">
+        <a href={phoneHref} aria-label={`Call ${siteConfig.phone}`}>
           <Phone size={15} aria-hidden="true" />
-          <span>+91 91316 49079</span>
+          <span>{siteConfig.phone}</span>
         </a>
-        <a className="site-header__mobile-whatsapp" href="https://wa.me/919131649079" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+        <a className="site-header__mobile-whatsapp" href={whatsappHref} target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
           <WhatsAppIcon size={15} />
           <span>WhatsApp</span>
         </a>
@@ -51,11 +54,11 @@ export function SiteHeader() {
           <ArrowUpRight size={14} aria-hidden="true" />
         </Link>
         <div className="site-header__actions">
-          <a className="site-header__phone" href="tel:+919131649079" aria-label="Call +91 91316 49079" title="Call +91 91316 49079">
+          <a className="site-header__phone" href={phoneHref} aria-label={`Call ${siteConfig.phone}`} title={`Call ${siteConfig.phone}`}>
             <Phone size={16} aria-hidden="true" />
-            <span>+91 91316 49079</span>
+            <span>{siteConfig.phone}</span>
           </a>
-          <a className="site-header__whatsapp" href="https://wa.me/919131649079" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp" title="Chat with us on WhatsApp">
+          <a className="site-header__whatsapp" href={whatsappHref} target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp" title="Chat with us on WhatsApp">
             <WhatsAppIcon size={16} />
             <span>WhatsApp</span>
           </a>

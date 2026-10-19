@@ -32,7 +32,6 @@ export function ServiceCard({ service, index = 0, showImage = false }: { service
       )}
       <div className="service-card__topline">
         <span className="service-card__icon"><Icon size={20} strokeWidth={1.7} aria-hidden="true" /></span>
-        <span className="service-card__number">0{index + 1}</span>
       </div>
       <h3>{service.name}</h3>
       <p>{service.summary}</p>
