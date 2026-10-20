@@ -1,11 +1,12 @@
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, Check, MapPin, MoveUpRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Check, Mail, MapPin, MoveUpRight } from "lucide-react";
 import { HeroArt } from "@/components/hero-art";
 import { SectionHeading } from "@/components/section-heading";
 import { ServiceCard } from "@/components/service-card";
 import { CarModelCarousel } from "@/components/car-model-carousel";
 import { VehicleCard } from "@/components/vehicle-card";
-import { siteConfig } from "@/config/site";
+import { AboutContactSection } from "@/components/about-contact-section";
+import { sampleContactEmail, siteConfig } from "@/config/site";
 import { services, vehicleCategories } from "@/data/site-content";
 
 export default function HomePage() {
@@ -116,10 +117,13 @@ export default function HomePage() {
               <p>Tell us your pickup, destination, date, and preferred category to prepare an enquiry summary.</p>
             </div>
             <Link className="button button--amber" href="/contact#enquiry">Plan your enquiry <ArrowUpRight size={17} aria-hidden="true" /></Link>
+            <a className="quote-banner__email" href={`mailto:${sampleContactEmail}`}><Mail size={15} aria-hidden="true" /> {sampleContactEmail}</a>
             <span className="quote-banner__note"><Check size={14} aria-hidden="true" /> Pricing is shared by quote</span>
           </div>
         </div>
       </section>
+
+      <AboutContactSection />
     </>
   );
 }

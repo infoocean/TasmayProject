@@ -53,14 +53,13 @@ export function PricingCategoryTabs() {
             onClick={() => setActiveSlug(vehicle.slug)}
             onKeyDown={(event) => handleTabKeyDown(event, index)}
           >
-            <span className="pricing-category-tab__number">0{index + 1}</span>
             <span className="pricing-category-tab__name">{vehicle.name}</span>
             <ArrowRight className="pricing-category-tab__arrow" size={17} aria-hidden="true" />
           </button>
         ))}
       </div>
 
-      {vehicleCategories.map((vehicle, index) => {
+      {vehicleCategories.map((vehicle) => {
         const photo = vehiclePhotos[vehicle.slug];
         const isActive = activeSlug === vehicle.slug;
 
@@ -85,7 +84,7 @@ export function PricingCategoryTabs() {
               <figcaption>Representative vehicle photo</figcaption>
             </figure>
             <div className="pricing-category-panel__content">
-              <p className="pricing-category-panel__label">CATEGORY 0{index + 1}</p>
+              <p className="pricing-category-panel__label">VEHICLE CATEGORY</p>
               <h3>{vehicle.name}</h3>
               <p className="pricing-category-panel__description">{vehicle.details}</p>
               <p className="pricing-category-panel__note">Exact vehicle variants, availability, and rates can be confirmed with a quote.</p>

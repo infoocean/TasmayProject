@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, MapPin } from "lucide-react";
 import { siteConfig } from "@/config/site";
+import { AboutContactSection } from "@/components/about-contact-section";
 import { vehiclePhotos, heroPhoto } from "@/data/vehicle-images";
 import { createPageMetadata } from "@/lib/metadata";
 
@@ -41,10 +42,10 @@ export default function AboutPage() {
       <section className="about-hero">
         <div className="container about-hero__inner">
           <div className="about-hero__copy" data-reveal>
-            <p className="eyebrow">ABOUT TASMAY</p>
-            <h1>A clear start to your next journey.</h1>
+            <p className="eyebrow">ABOUT TASMAY CAR RENTAL</p>
+            <h1>Your next journey starts here.</h1>
             <p className="about-hero__description">
-              Explore the vehicle categories listed by Tasmay Car Rentals and share your trip details to prepare a quote enquiry from Indore.
+              Find a vehicle category that suits your plans, then share your trip details with Tasmay Car Rental to request a quote from Indore.
             </p>
             <div className="about-hero__actions">
               <Link className="button button--primary" href="#categories">
@@ -55,14 +56,21 @@ export default function AboutPage() {
           </div>
           <figure className="about-hero__visual" data-reveal>
             <Image
-              src={heroPhoto.src}
-              alt={heroPhoto.alt}
+              src="/images/model-photos/hyundai-verna.jpg"
+              alt="Hyundai Verna sedan, representative model photo"
               fill
               priority
               sizes="(max-width: 820px) 100vw, 54vw"
               className="about-hero__image"
             />
-            <figcaption className="about-photo-label">Representative travel photo</figcaption>
+            <figcaption className="about-photo-label">Explore the open road</figcaption>
+            <Link className="about-hero__secondary" href="#categories" aria-label="Explore vehicle categories">
+              <div className="about-hero__secondary-visual">
+                <Image src={heroPhoto.src} alt={heroPhoto.alt} fill sizes="160px" />
+              </div>
+              <div><span>YOUR TRIP, YOUR WAY</span><strong>Find your ride</strong></div>
+              <ArrowUpRight size={18} aria-hidden="true" />
+            </Link>
           </figure>
         </div>
       </section>
@@ -77,26 +85,23 @@ export default function AboutPage() {
               sizes="(max-width: 820px) 100vw, 46vw"
               className="about-approach__image"
             />
-            <figcaption className="about-photo-label">Representative vehicle photo</figcaption>
+            <figcaption className="about-photo-label">Representative photo</figcaption>
           </figure>
 
           <div className="about-approach__content" data-reveal>
-            <p className="eyebrow">01 — THE APPROACH</p>
+            <p className="eyebrow">THE APPROACH</p>
             <h2>The details that make a useful quote.</h2>
             <p className="about-approach__intro">
               Share where you’re travelling, when you need the car, and which category you have in mind. Tasmay Car Rentals lists service from {siteConfig.area}.
             </p>
             <div className="about-steps">
               <div className="about-step">
-                <span>01</span>
                 <p><strong>Tell us about the trip</strong><small>Add your pickup point, destination, and travel date.</small></p>
               </div>
               <div className="about-step">
-                <span>02</span>
                 <p><strong>Choose a category</strong><small>Pick Sedan, SUV, or Ertiga / Innova.</small></p>
               </div>
               <div className="about-step">
-                <span>03</span>
                 <p><strong>Request a quote</strong><small>Rates and trip terms are confirmed with each quote.</small></p>
               </div>
             </div>
@@ -111,13 +116,13 @@ export default function AboutPage() {
         <div className="container">
           <div className="about-categories__heading" data-reveal>
             <div>
-              <p className="eyebrow">02 — VEHICLE CATEGORIES</p>
+              <p className="eyebrow">VEHICLE CATEGORIES</p>
               <h2>Choose a starting point for your plans.</h2>
             </div>
             <Link className="text-link" href="/cars">View all categories <ArrowUpRight size={15} /></Link>
           </div>
           <div className="about-category-grid">
-            {categories.map((category, index) => (
+            {categories.map((category) => (
               <article className="about-category-card" key={category.slug} data-reveal>
                 <Link className="about-category-card__visual" href={`/cars/${category.slug}`} aria-label={`Explore ${category.title} category`}>
                   <Image
@@ -127,7 +132,6 @@ export default function AboutPage() {
                     sizes="(max-width: 580px) 100vw, (max-width: 820px) 50vw, 33vw"
                     className="about-category-card__image"
                   />
-                  <span className="about-category-card__index">0{index + 1}</span>
                   <span className="about-category-card__photo-note">Representative photo</span>
                 </Link>
                 <div className="about-category-card__body">
@@ -141,10 +145,12 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <AboutContactSection className="about-contact-section--compact" />
+
       <section className="about-map-section">
         <div className="container">
           <div className="about-map-section__heading" data-reveal>
-            <p className="eyebrow">03 — LOCATION</p>
+            <p className="eyebrow">LOCATION</p>
             <h2>Vijay Nagar, Indore.</h2>
             <p>Explore the Vijay Nagar area on the map.</p>
           </div>
@@ -169,6 +175,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
     </>
   );
 }

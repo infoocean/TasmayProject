@@ -23,5 +23,6 @@ export const siteConfig = {
 
 export const whatsappMessage = "Hi Tasmay Car Rentals, I’d like to enquire about a car rental. Please share availability and pricing.";
 export const whatsappHref = `https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+export const sampleContactEmail = "hello@tasmaycarrentals.example.com";
 
 export type SiteConfig = typeof siteConfig;
