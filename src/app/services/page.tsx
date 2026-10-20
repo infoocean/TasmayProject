@@ -14,13 +14,12 @@ export const metadata = createPageMetadata({
 export default function ServicesPage() {
   return (
     <>
-      <PageIntro eyebrow="TRIP OPTIONS" title="What kind of trip are you planning?" description="Choose a trip type to start your enquiry. Add your route, travel date, and preferred vehicle category to prepare a quote summary." />
+      <PageIntro eyebrow="TRIP OPTIONS · PLAN YOUR JOURNEY" title="What kind of trip are you planning?" description="Choose a trip type to start your enquiry. Add your route, travel date, and preferred vehicle category to prepare a quote summary." />
       <section className="section page-section">
         <div className="container">
           <div className="service-grid service-grid--all">
             {services.map((service, index) => <ServiceCard key={service.slug} service={service} index={index} showImage />)}
           </div>
-          <div className="verification-note"><span>CONFIRM TRIP DETAILS</span><p>These options are trip types to enquire about. Confirm availability, rates, and rental terms for your route.</p></div>
         </div>
       </section>
       <section className="quote-banner-section services-next">
