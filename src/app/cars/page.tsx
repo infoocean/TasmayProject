@@ -3,17 +3,18 @@ import { VehicleCard } from "@/components/vehicle-card";
 import { CarModelCarousel } from "@/components/car-model-carousel";
 import { vehicleCategories } from "@/data/site-content";
 import { createPageMetadata } from "@/lib/metadata";
+import { siteConfig } from "@/config/site";
 
 export const metadata = createPageMetadata({
   title: "Car Categories in Indore",
-  description: "Explore Sedan, SUV, and Ertiga / Innova categories from Tasmay Car Rentals and request a quote for your route.",
+  description: `Explore Sedan, SUV, and Ertiga / Innova categories from ${siteConfig.name} and request a quote for your route.`,
   path: "/cars",
 });
 
 export default function CarsPage() {
   return (
     <>
-      <PageIntro eyebrow="OUR CARS · FOR EVERY JOURNEY" title="Find the category for your journey." description="Explore the vehicle categories currently listed by Tasmay Car Rentals. Exact vehicles, specifications, and availability can be confirmed with a quote." />
+      <PageIntro eyebrow="OUR CARS · FOR EVERY JOURNEY" title="Find the category for your journey." description={`Explore the vehicle categories currently listed by ${siteConfig.name}. Exact vehicles, specifications, and availability can be confirmed with a quote.`} />
       <section className="section page-section">
         <div className="container">
           <div className="vehicle-grid">

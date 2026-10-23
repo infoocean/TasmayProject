@@ -1,10 +1,10 @@
 export const siteConfig = {
-  name: "Tasmay Car Rentals",
+  name: "Shree Gatiman Car Rentals",
   area: "Indore, Madhya Pradesh, India",
   // TODO: Client to supply the production domain before launch.
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL?.trim() || null,
-  phone: "+91 99931 11269",
-  whatsappNumber: "919993111269",
+  phone: "+91 97531 53179",
+  whatsappNumber: "919753153179",
   email: null as string | null,
   address: null as string | null,
   businessHours: null as string | null,
@@ -21,7 +21,7 @@ export const siteConfig = {
   pricingLabel: "Request a Quote",
 } as const;
 
-export const whatsappMessage = "Hi Tasmay Car Rentals, I’d like to enquire about a car rental. Please share availability and pricing.";
+export const whatsappMessage = `Hi ${siteConfig.name}, I’d like to enquire about a car rental. Please share availability and pricing.`;
 export const whatsappHref = `https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 export const sampleContactEmail = "hello@tasmaycarrentals.example.com";
 

@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import localFont from "next/font/local";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
@@ -21,15 +22,15 @@ const manrope = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default: "Car Rentals in Indore | Tasmay Car Rentals",
-    template: "%s | Tasmay Car Rentals",
+    default: `Car Rentals in Indore | ${siteConfig.name}`,
+    template: `%s | ${siteConfig.name}`,
   },
-  description: "Explore Sedan, SUV, and Ertiga / Innova rental categories from Indore. Share your route and request a quote from Tasmay Car Rentals.",
+  description: `Explore Sedan, SUV, and Ertiga / Innova rental categories from Indore. Share your route and request a quote from ${siteConfig.name}.`,
   ...(siteConfig.siteUrl ? { metadataBase: new URL(siteConfig.siteUrl) } : {}),
   openGraph: {
     type: "website",
     siteName: siteConfig.name,
-    title: "Car Rentals in Indore | Tasmay Car Rentals",
+    title: `Car Rentals in Indore | ${siteConfig.name}`,
     description: "Explore vehicle categories and request a rental quote for your journey from Indore.",
   },
 };

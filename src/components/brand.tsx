@@ -1,18 +1,16 @@
 import Link from "next/link";
+import { siteConfig } from "@/config/site";
 
 export function Brand({ inverse = false }: { inverse?: boolean }) {
   return (
-    <Link className={`brand${inverse ? " brand--inverse" : ""}`} href="/" aria-label="Tasmay Car Rentals home">
+    <Link className={`brand${inverse ? " brand--inverse" : ""}`} href="/" aria-label={`${siteConfig.name} home`}>
       <svg className="brand__mark" viewBox="0 0 64 48" fill="none" aria-hidden="true">
-        <path d="M9 31.5 15.2 22c1.2-1.8 3.1-2.8 5.3-2.8h20.2c2.1 0 4 1 5.2 2.7l5.8 8.3" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" />
-        <path d="M6.5 30.5h45.8c2.4 0 4.2 2 4.2 4.3v2.1H4v-2.1c0-2.4 1-4.3 2.5-4.3Z" fill="currentColor" />
-        <circle cx="14.5" cy="38" r="4.5" fill="#F59E0B" stroke="currentColor" strokeWidth="2" />
-        <circle cx="46.5" cy="38" r="4.5" fill="#F59E0B" stroke="currentColor" strokeWidth="2" />
-        <path d="M4.5 13.5c8.8-9.3 22.8-12.7 35.3-7.9 5.2 2 9.4 5.2 12.6 9.3" stroke="#F59E0B" strokeWidth="2.5" strokeLinecap="round" />
-        <path d="M23 19.5 28.5 12h8l6.4 8" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M32 2 53 8v13c0 11.5-8.7 20.2-21 25C19.7 41.2 11 32.5 11 21V8L32 2Z" fill="#111" stroke="#d79a24" strokeWidth="2.8" />
+        <path d="M20 15h10v5H25v4h5v12l-8-5V15Zm14 0h10v5h-5v4h5v12l-8-5V15Z" fill="#f3c65b" />
+        <path d="M6 44c10-6 19-7 27-3 8 4 15 3 25-2" stroke="#d79a24" strokeWidth="2" strokeLinecap="round" />
       </svg>
       <span className="brand__wordmark">
-        <span className="brand__name">TASMAY</span>
+        <span className="brand__name">SHREE GATIMAN</span>
         <span className="brand__descriptor">CAR RENTALS</span>
       </span>
     </Link>

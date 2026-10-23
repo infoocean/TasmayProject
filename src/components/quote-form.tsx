@@ -1,9 +1,10 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import { ArrowUpRight, Check, Clipboard, Info } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { vehicleCategories, services } from "@/data/site-content";
 import { carModels } from "@/data/car-models";
+import { siteConfig } from "@/config/site";
 
 type EnquiryValues = {
   name: string;
@@ -45,7 +46,7 @@ function validate(values: EnquiryValues): FieldErrors {
 
 function formatSummary(values: EnquiryValues) {
   return [
-    "Tasmay Car Rentals — quote enquiry",
+    `${siteConfig.name} — quote enquiry`,
     `Name: ${values.name.trim()}`,
     `Phone: ${values.phone.trim()}`,
     `Pickup: ${values.pickup.trim()}`,
@@ -63,37 +64,24 @@ type QuoteFormProps = { initialValues?: Partial<EnquiryValues> };
 export function QuoteForm({ initialValues: providedValues }: QuoteFormProps) {
   const [values, setValues] = useState<EnquiryValues>(() => ({ ...initialValues, ...providedValues }));
   const [errors, setErrors] = useState<FieldErrors>({});
-  const [summary, setSummary] = useState("");
-  const [copyState, setCopyState] = useState<"idle" | "copied" | "failed">("idle");
 
   function update<K extends keyof EnquiryValues>(key: K, value: EnquiryValues[K]) {
     setValues((current) => ({ ...current, [key]: value }));
     if (errors[key]) setErrors((current) => ({ ...current, [key]: undefined }));
     if (key === "model" && value.trim() && errors.vehicle) setErrors((current) => ({ ...current, vehicle: undefined }));
-    setSummary("");
-    setCopyState("idle");
   }
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const nextErrors = validate(values);
     setErrors(nextErrors);
-    setCopyState("idle");
     if (Object.keys(nextErrors).length > 0) {
-      setSummary("");
       document.getElementById(Object.keys(nextErrors)[0])?.focus();
       return;
     }
-    setSummary(formatSummary(values));
-  }
-
-  async function copySummary() {
-    try {
-      await navigator.clipboard.writeText(summary);
-      setCopyState("copied");
-    } catch {
-      setCopyState("failed");
-    }
+    const enquiry = formatSummary(values);
+    const messageUrl = `https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(enquiry)}`;
+    window.open(messageUrl, "_blank", "noopener,noreferrer");
   }
 
   const fieldProps = (key: keyof EnquiryValues) => ({
@@ -160,28 +148,9 @@ export function QuoteForm({ initialValues: providedValues }: QuoteFormProps) {
             <textarea id="message" value={values.message} onChange={(event) => update("message", event.target.value)} rows={4} placeholder="Add any details that may help describe your trip." />
           </div>
         </div>
-        <div className="form-notice">
-          <Info size={17} aria-hidden="true" />
-          <p>This form prepares a summary in your browser. No contact channel or message delivery service has been configured, so it will not send your enquiry.</p>
-        </div>
-        <button className="button button--primary quote-form__submit" type="submit">Prepare enquiry summary <ArrowUpRight size={16} aria-hidden="true" /></button>
+        <button className="button button--primary quote-form__submit" type="submit">Send enquiry on WhatsApp <ArrowUpRight size={16} aria-hidden="true" /></button>
       </form>
 
-      {summary && (
-        <section className="quote-summary" aria-live="polite" aria-labelledby="summary-title">
-          <div className="quote-summary__heading">
-            <span className="quote-summary__icon"><Check size={17} aria-hidden="true" /></span>
-            <div>
-              <h3 id="summary-title">Your enquiry summary is ready</h3>
-              <p>Review or copy these details. They have not been sent.</p>
-            </div>
-          </div>
-          <pre>{summary}</pre>
-          <button className="button button--outline" type="button" onClick={copySummary}><Clipboard size={16} aria-hidden="true" /> Copy summary</button>
-          {copyState === "copied" && <p className="copy-feedback" role="status">Summary copied to your clipboard.</p>}
-          {copyState === "failed" && <p className="copy-feedback" role="status">Clipboard access failed. You can select and copy the summary above.</p>}
-        </section>
-      )}
     </div>
   );
 }
