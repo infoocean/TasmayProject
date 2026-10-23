@@ -50,7 +50,7 @@ h3 { font-size: 1.35rem; line-height: 1.2; font-weight: 620; }
 .brand { display: inline-flex; align-items: center; gap: 9px; flex: 0 0 auto; color: var(--navy); }
 .brand__mark { width: 53px; height: 42px; }
 .brand__wordmark { display: flex; flex-direction: column; line-height: 1; }
-.brand__name { font-family: var(--font-heading); font-size: 19px; font-weight: 800; letter-spacing: .13em; }
+.brand__name { font-family: Georgia, "Times New Roman", serif; font-size: 16px; font-weight: 800; letter-spacing: .08em; }
 .brand__descriptor { color: var(--amber-deep); font-size: 9px; font-weight: 800; letter-spacing: .28em; margin-top: 5px; }
 .site-nav { display: flex; align-items: center; gap: clamp(18px, 2.25vw, 32px); margin-left: auto; }
 .site-nav__link { color: #39475b; font-size: 13px; font-weight: 600; transition: color .18s ease; }
@@ -388,14 +388,6 @@ h3 { font-size: 1.35rem; line-height: 1.2; font-weight: 620; }
 .form-notice svg { flex: 0 0 auto; margin-top: 1px; color: #9c6b19; }
 .form-notice p { margin: 0; font-size: 9px; line-height: 1.65; }
 .quote-form__submit { margin-top: 18px; }
-.quote-summary { margin-top: 22px; padding: 18px; border: 1px solid #dbe9df; border-radius: 8px; background: #f5faf6; }
-.quote-summary__heading { display: flex; align-items: center; gap: 10px; }
-.quote-summary__icon { width: 30px; height: 30px; display: grid; place-items: center; border-radius: 50%; color: #227044; background: #dff0e4; }
-.quote-summary__heading h3 { margin: 0 0 2px; color: #1c422c; font-size: 13px; letter-spacing: -.02em; }
-.quote-summary__heading p { margin: 0; color: #6d8274; font-size: 10px; }
-.quote-summary pre { max-height: 280px; overflow: auto; margin: 16px 0; padding: 13px; color: #344b3a; background: #fff; border: 1px solid #e2ece4; border-radius: 5px; white-space: pre-wrap; font-family: var(--font-body); font-size: 10px; line-height: 1.7; }
-.quote-summary .button { min-height: 39px; font-size: 10px; }
-.copy-feedback { margin: 9px 0 0; color: #28633e; font-size: 10px; }
 
 .legal-section { padding-top: 55px; }
 .image-credits-list { max-width: 900px; margin: 0; padding-left: 20px; color: #637082; font-size: 13px; line-height: 2; }

@@ -4,10 +4,11 @@ import { services } from "@/data/site-content";
 import { createPageMetadata } from "@/lib/metadata";
 import { ArrowUpRight, Info } from "lucide-react";
 import Link from "next/link";
+import { siteConfig } from "@/config/site";
 
 export const metadata = createPageMetadata({
   title: "Car Rental Services in Indore",
-  description: "Explore trip enquiry options for local taxi, outstation travel, airport transfers, corporate travel, and weddings or events with Tasmay Car Rentals in Indore.",
+  description: `Explore trip enquiry options for local taxi, outstation travel, airport transfers, corporate travel, and weddings or events with ${siteConfig.name} in Indore.`,
   path: "/services",
 });
 
@@ -29,10 +30,10 @@ export default function ServicesPage() {
             <div>
               <p className="eyebrow eyebrow--light">READY WHEN YOU ARE</p>
               <h2>Start with a few trip details.</h2>
-              <p>Choose a service card to preselect your trip type, then add your route, date, and vehicle category. The form prepares a summary in your browser; it does not send it.</p>
+              <p>Choose a service card to preselect your trip type, then add your route, date, and vehicle category. Submitting the form opens a prefilled WhatsApp message for you to review and send.</p>
             </div>
             <Link className="button button--amber" href="/contact#enquiry">Open quote enquiry <ArrowUpRight size={17} aria-hidden="true" /></Link>
-            <span className="quote-banner__note"><Info size={14} aria-hidden="true" /> Your enquiry summary stays on this device</span>
+            <span className="quote-banner__note"><Info size={14} aria-hidden="true" /> Review and send your enquiry in WhatsApp</span>
           </div>
         </div>
       </section>

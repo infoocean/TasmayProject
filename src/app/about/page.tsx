@@ -7,8 +7,8 @@ import { vehiclePhotos, heroPhoto } from "@/data/vehicle-images";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata = createPageMetadata({
-  title: "About Tasmay Car Rentals",
-  description: "Explore Tasmay Car Rentals vehicle categories and prepare a rental quote enquiry from Indore, Madhya Pradesh.",
+  title: `About ${siteConfig.name}`,
+  description: `Explore ${siteConfig.name} vehicle categories and prepare a rental quote enquiry from Indore, Madhya Pradesh.`,
   path: "/about",
 });
 
@@ -42,10 +42,10 @@ export default function AboutPage() {
       <section className="about-hero">
         <div className="container about-hero__inner">
           <div className="about-hero__copy" data-reveal>
-            <p className="eyebrow">ABOUT TASMAY CAR RENTAL</p>
+            <p className="eyebrow">ABOUT {siteConfig.name.toUpperCase()}</p>
             <h1>Your next journey starts here.</h1>
             <p className="about-hero__description">
-              Find a vehicle category that suits your plans, then share your trip details with Tasmay Car Rental to request a quote from Indore.
+              Find a vehicle category that suits your plans, then share your trip details with {siteConfig.name} to request a quote from Indore.
             </p>
             <div className="about-hero__actions">
               <Link className="button button--primary" href="#categories">
@@ -92,7 +92,7 @@ export default function AboutPage() {
             <p className="eyebrow">THE APPROACH</p>
             <h2>The details that make a useful quote.</h2>
             <p className="about-approach__intro">
-              Share where you’re travelling, when you need the car, and which category you have in mind. Tasmay Car Rentals lists service from {siteConfig.area}.
+              Share where you’re travelling, when you need the car, and which category you have in mind. {siteConfig.name} lists service from {siteConfig.area}.
             </p>
             <div className="about-steps">
               <div className="about-step">

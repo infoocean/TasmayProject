@@ -22,7 +22,7 @@ export function SiteHeader() {
 
   return (
     <header className="site-header" onKeyDown={(event) => { if (event.key === "Escape") setOpen(false); }}>
-      <div className="site-header__mobile-contact" role="group" aria-label="Contact Tasmay Car Rentals">
+      <div className="site-header__mobile-contact" role="group" aria-label={`Contact ${siteConfig.name}`}>
         <a href={phoneHref} aria-label={`Call ${siteConfig.phone}`}>
           <Phone size={15} aria-hidden="true" />
           <span>{siteConfig.phone}</span>

@@ -13,7 +13,7 @@ export function AboutContactSection({ className = "" }: { className?: string }) 
         <div className="about-contact-copy">
           <p className="eyebrow">GET IN TOUCH</p>
           <h2>Let’s plan your next trip.</h2>
-          <p>Contact Tasmay Car Rental in Indore or follow us on social media.</p>
+          <p>Contact {siteConfig.name} in Indore or follow us on social media.</p>
         </div>
         <div className="about-contact-links">
           <a href={`tel:${siteConfig.phone.replace(/\s/g, "")}`}><Phone size={17} /><span><small>Call us</small>{siteConfig.phone}</span></a>
